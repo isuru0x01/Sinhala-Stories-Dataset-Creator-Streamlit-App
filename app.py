@@ -45,5 +45,5 @@ if st.button('Submit'):
     updated_dataset = concatenate_datasets([existing_dataset, new_entry_dataset])
     
     # Push the updated dataset to the Hugging Face hub
-    updated_dataset.push_to_hub(f"{DATASET_REPO}")
+    updated_dataset.push_to_hub(f"{DATASET_REPO}", token=HUGGINGFACE_TOKEN)
     progress.progress(1.0)  # Update progress bar
