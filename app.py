@@ -19,8 +19,11 @@ MAX_FILE_SIZE_MB = 512
 # Streamlit app
 st.title('Story Submission')
 
+# Placeholder for the text area
+text_area_placeholder = st.empty()
+
 # Text input for user to submit a story
-story = st.text_area('Enter your story here', height=300)
+story = text_area_placeholder.text_area('Enter your story here', height=300)
 
 # Button to submit the story
 if st.button('Submit'):
@@ -47,3 +50,6 @@ if st.button('Submit'):
     # Push the updated dataset to the Hugging Face hub
     updated_dataset.push_to_hub(f"{DATASET_REPO}", token=HUGGINGFACE_TOKEN)
     progress.progress(1.0)  # Update progress bar
+    
+    # Clear the text area
+    text_area_placeholder.empty()
