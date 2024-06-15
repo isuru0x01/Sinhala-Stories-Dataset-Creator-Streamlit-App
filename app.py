@@ -9,8 +9,8 @@ from datasets import DatasetDict
 from datasets import Dataset
 
 # Hugging Face credentials
-#HUGGINGFACE_TOKEN = st.secrets["HUGGINGFACE_TOKEN"]
-HUGGINGFACE_TOKEN = "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"
+HUGGINGFACE_TOKEN = st.secrets["HUGGINGFACE_TOKEN"]
+#HUGGINGFACE_TOKEN = "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"
 DATASET_REPO = 'Isuru0x01/sinhala_stories'
 BASE_CSV_NAME = 'stories.csv'
 MAX_FILE_SIZE_MB = 512
@@ -21,7 +21,6 @@ st.title('Story Submission')
 # Text input for user to submit a story
 story = st.text_area('Enter your story here', height=300)
 
-# Button to submit the story
 # Button to submit the story
 if st.button('Submit'):
     
