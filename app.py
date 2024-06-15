@@ -10,6 +10,7 @@ from datasets import Dataset
 
 # Hugging Face credentials
 HUGGINGFACE_TOKEN = st.secrets["HUGGINGFACE_TOKEN"]
+os.environ["HUGGINGFACE_TOKEN"] = HUGGINGFACE_TOKEN
 #HUGGINGFACE_TOKEN = "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"
 DATASET_REPO = 'Isuru0x01/sinhala_stories'
 BASE_CSV_NAME = 'stories.csv'
